@@ -23,35 +23,6 @@ import HelloWorld from "./components/HelloWorld.vue"
 </style> -->
 
 <template>
-    <!-- 页面模板 -->
-    <h1 class="title" @click="hit">{{ title }}</h1>
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
 </template>
-
-<script>
-export default {
-    computed: {
-        language() {
-            return localStorage.getItem("language") || "zh-CN"
-        },
-    },
-    data() {
-        // 数据
-        return {
-            title: "213123213123123",
-        }
-    },
-    methods: {
-        // 定义函数的地方
-        hit() {
-            alert("hit")
-        },
-    },
-}
-</script>
-
-<style>
-/* 样式 */
-.title {
-    color: teal;
-}
-</style>
